@@ -1,8 +1,11 @@
 import streamlit as st
 
-st.title("DỰ THẢO: KẾ HOẠCH BAN ĐẦU CỦA CHƯƠNG TRÌNH")
+st.set_page_config(
+    page_title="Chương trình thiện nguyện",
+    page_icon="	:page_with_curl:"
+)
 
-st.header("TÊN CHƯƠNG TRÌNH: MÙA ĐÔNG ẤM ÁP")
+st.markdown("<h1 style='text-align: center;'>Mùa đông ấm áp</h1>", unsafe_allow_html=True)
 
 with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
     st.write("- Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
@@ -33,10 +36,5 @@ with st.expander("IV/ KẾ HOẠCH CHƯƠNG TRÌNH:"):
 
     st.markdown("**Kế hoạch chi tiết và kịch bản chương trình:**")
     st.write("- Chi tiết về phương tiện di chuyển, kịch bản buổi sáng và buổi chiều sẽ được thông báo qua các tài liệu bổ sung.")
-
-st.write("---")
-st.write("**Tham khảo thêm thông tin từ các liên kết:**")
-st.write("[Tài liệu tham khảo 1](https://docs.google.com/document/d/1IGMAqtwWQZK1ksLZxhWpAKwMa4i-DfFTeM4JkWla70A/edit?tab=t.0)")
-st.write("[Tài liệu tham khảo 2](https://docs.google.com/document/d/1AhdI-ovXrBsG82TITQXOVNS6_E_45coonVA1ZEPyfIM/edit?usp=sharing)")
-st.write("[Tài liệu tham khảo 3](https://docs.google.com/document/d/1cArtQbqggxNz3c3oOux_5vmiHGvKcCPXplHjlgwphT0/edit?tab=t.0)")
-
+with st.expander("V/ NHÀ TÀI TRỢ:"):
+    st.image("z6128027135817_c5b8af696cb09172df0158de876cbb7b.jpg")
