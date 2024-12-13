@@ -4,18 +4,18 @@ st.title("DỰ THẢO: KẾ HOẠCH BAN ĐẦU CỦA CHƯƠNG TRÌNH")
 
 st.header("TÊN CHƯƠNG TRÌNH: MÙA ĐÔNG ẤM ÁP")
 
-if st.checkbox("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
+if st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:").expanded:
     st.write("- Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
 
-if st.checkbox("II/ THỜI GIAN VÀ ĐỊA ĐIỂM:"):
+if st.expander("II/ THỜI GIAN VÀ ĐỊA ĐIỂM:").expanded:
     st.write("- Thời gian: ngày 21/12/2024 ( dự trù: đầu tháng 1/2025)")
     st.write("- Địa điểm: Hội trường C - tầng 3, Bệnh viện Ung Bướu, Quận 9, thành phố Hồ Chí Minh")
 
-if st.checkbox("III/ ĐỐI TƯỢNG THAM GIA:"):
+if st.expander("III/ ĐỐI TƯỢNG THAM GIA:").expanded:
     st.write("- Tình nguyện viên: Sinh viên trường đại học Khoa Học Xã hội và Nhân Văn")
     st.write("- Bệnh nhân: Khoảng 150 bệnh nhân ung thư máu có hoàn cảnh khó khăn")
 
-if st.checkbox("IV/ KẾ HOẠCH CHƯƠNG TRÌNH:"):
+if st.expander("IV/ KẾ HOẠCH CHƯƠNG TRÌNH:").expanded:
     st.markdown("**4.1 Chuẩn bị trước chương trình:**")
     st.write("- Chiến dịch bán đồ Handmade, đồ ăn vặt:")
     st.table({
