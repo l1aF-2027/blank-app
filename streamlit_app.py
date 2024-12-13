@@ -4,18 +4,18 @@ st.title("DỰ THẢO: KẾ HOẠCH BAN ĐẦU CỦA CHƯƠNG TRÌNH")
 
 st.header("TÊN CHƯƠNG TRÌNH: MÙA ĐÔNG ẤM ÁP")
 
-if st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:").expanded:
+with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
     st.write("- Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
 
-if st.expander("II/ THỜI GIAN VÀ ĐỊA ĐIỂM:").expanded:
+with st.expander("II/ THỜI GIAN VÀ ĐỊA ĐIỂM:"):
     st.write("- Thời gian: ngày 21/12/2024 ( dự trù: đầu tháng 1/2025)")
     st.write("- Địa điểm: Hội trường C - tầng 3, Bệnh viện Ung Bướu, Quận 9, thành phố Hồ Chí Minh")
 
-if st.expander("III/ ĐỐI TƯỢNG THAM GIA:").expanded:
+with st.expander("III/ ĐỐI TƯỢNG THAM GIA:"):
     st.write("- Tình nguyện viên: Sinh viên trường đại học Khoa Học Xã hội và Nhân Văn")
     st.write("- Bệnh nhân: Khoảng 150 bệnh nhân ung thư máu có hoàn cảnh khó khăn")
 
-if st.expander("IV/ KẾ HOẠCH CHƯƠNG TRÌNH:").expanded:
+with st.expander("IV/ KẾ HOẠCH CHƯƠNG TRÌNH:"):
     st.markdown("**4.1 Chuẩn bị trước chương trình:**")
     st.write("- Chiến dịch bán đồ Handmade, đồ ăn vặt:")
     st.table({
@@ -39,5 +39,4 @@ st.write("**Tham khảo thêm thông tin từ các liên kết:**")
 st.write("[Tài liệu tham khảo 1](https://docs.google.com/document/d/1IGMAqtwWQZK1ksLZxhWpAKwMa4i-DfFTeM4JkWla70A/edit?tab=t.0)")
 st.write("[Tài liệu tham khảo 2](https://docs.google.com/document/d/1AhdI-ovXrBsG82TITQXOVNS6_E_45coonVA1ZEPyfIM/edit?usp=sharing)")
 st.write("[Tài liệu tham khảo 3](https://docs.google.com/document/d/1cArtQbqggxNz3c3oOux_5vmiHGvKcCPXplHjlgwphT0/edit?tab=t.0)")
-
 
