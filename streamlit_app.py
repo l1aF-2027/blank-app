@@ -3,6 +3,7 @@ import streamlit as st
 st.set_page_config(
     page_title="Chương trình thiện nguyện",
     page_icon=":page_with_curl:",
+    layout="wide"
 )
 
 st.markdown(
@@ -31,8 +32,6 @@ with col1:
 
 # Cột 2: Hiển thị nội dung chữ
 with col2:
-    st.markdown("# Chương trình thiện nguyện")
-
     with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
         st.write("- Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
 
