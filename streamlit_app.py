@@ -49,7 +49,7 @@ def set_bg_hack(main_bg):
 set_bg_hack(r'MÙA ĐÔNG ẤM ÁP (1).png')
 st.markdown('''
 <style>
-.stApp [data-testid="stToolbar"]{
+.stApp [data-testid="stHeader"]{
     display:none;
 }
 </style>
