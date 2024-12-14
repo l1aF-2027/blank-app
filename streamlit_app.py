@@ -49,13 +49,13 @@ def set_bg_hack(main_bg):
 set_bg_hack(r'MÙA ĐÔNG ẤM ÁP (1).png')
 hide_streamlit_style = """
 <style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
+.css-hi6a2p {padding-top: 0rem;}
 </style>
 
 """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-
+st.title("Test")
+if st.checkbox('Remove padding'):
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
     st.write("- Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
 
