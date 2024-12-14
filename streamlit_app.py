@@ -38,7 +38,7 @@ def set_bg_hack(main_bg):
             background-size: cover; /* Options: contain, cover, or specify in px/percent */
             background-repeat: no-repeat;
             background-position: center;
-            filter: blur(1px); /* Adjust the blur effect (e.g., 0px for no blur, 8px for moderate blur) */
+            filter: blur(0.1px); /* Adjust the blur effect (e.g., 0px for no blur, 8px for moderate blur) */
         }}
         </style>
         """,
