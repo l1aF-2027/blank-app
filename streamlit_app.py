@@ -43,7 +43,7 @@ st.markdown(
 )
 
 # Hiển thị hai cột
-col1, col2 = st.columns([1, 2], gap="none")
+col1, col2 = st.columns([1, 2])
 
 # Cột 1: Hiển thị hình ảnh, cố định
 with col1:
