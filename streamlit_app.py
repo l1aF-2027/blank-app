@@ -48,7 +48,7 @@ with col1:
     st.image("MÙA ĐÔNG ẤM ÁP (1).png", use_container_width=True)
 
 # Cột 2: Hiển thị nội dung chữ
-with col2.container(height=120):
+with col2.container(height=700):
     with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
         st.write("- Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
 
