@@ -6,28 +6,45 @@ st.set_page_config(
 )
 import base64
 
+import streamlit as st
+import base64
+
 def set_bg_hack(main_bg):
     '''
-    A function to unpack an image from root folder and set as bg.
+    A function to unpack an image from root folder and set as bg with custom size and blur effect.
  
+    Parameters
+    ----------
+    main_bg : str
+        The path to the background image file.
+    
     Returns
     -------
-    The background.
+    Sets the background for the Streamlit app.
     '''
-    # set bg name
+    # Set the image format (e.g., png or jpg)
     main_bg_ext = "png"
-        
+
+    # Encode the image file in base64
+    with open(main_bg, "rb") as img_file:
+        img_base64 = base64.b64encode(img_file.read()).decode()
+
+    # Apply CSS for background with size and blur
     st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()});
-             background-size: cover
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
+        f"""
+        <style>
+        .stApp {{
+            background: url(data:image/{main_bg_ext};base64,{img_base64});
+            background-size: contain; /* Options: contain, cover, or specify in px/percent */
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: blur(8px); /* Adjust the blur effect (e.g., 0px for no blur, 8px for moderate blur) */
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
 set_bg_hack(r'MÙA ĐÔNG ẤM ÁP (1).png')
 st.markdown("<h1 style='text-align: center;'>Mùa đông ấm áp</h1>", unsafe_allow_html=True)
 
