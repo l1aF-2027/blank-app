@@ -4,22 +4,16 @@ st.set_page_config(
     page_title="Chương trình thiện nguyện",
     page_icon="	:page_with_curl:"
 )
-background_image = "MÙA ĐÔNG ẤM ÁP (1).png"  # Đường dẫn tới hình ảnh của bạn
+page_bg_img = '''
+<style>
+body {
+background-image: url("MÙA ĐÔNG ẤM ÁP (1).png");
+background-size: cover;
+}
+</style>
+'''
 
-st.markdown(
-    f"""
-    <style>
-    .stApp {{
-        background-image: url("{background_image}");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+st.markdown(page_bg_img, unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center;'>Mùa đông ấm áp</h1>", unsafe_allow_html=True)
 
 with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
