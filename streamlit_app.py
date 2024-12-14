@@ -27,7 +27,7 @@ col1, col2 = st.columns([1, 2])
 
 # Cột 1: Hiển thị hình ảnh
 with col1:
-    st.image("MÙA ĐÔNG ẤM ÁP (1).png", use_column_width=True)
+    st.image("MÙA ĐÔNG ẤM ÁP (1).png", use_container_width=True)
 
 # Cột 2: Hiển thị nội dung chữ
 with col2:
