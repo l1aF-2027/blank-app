@@ -36,7 +36,7 @@ def set_bg_hack(main_bg):
         <style>
         .stApp {{
             background: url(data:image/{main_bg_ext};base64,{img_base64});
-            background-size: contain; /* Options: contain, cover, or specify in px/percent */
+            background-size: cover; /* Options: contain, cover, or specify in px/percent */
             background-repeat: no-repeat;
             background-position: center;
             filter: blur(0.1px); /* Adjust the blur effect (e.g., 0px for no blur, 8px for moderate blur) */
@@ -47,7 +47,7 @@ def set_bg_hack(main_bg):
     )
 
 set_bg_hack(r'MÙA ĐÔNG ẤM ÁP (1).png')
-st.markdown("<h1 style='text-align: center;'>Mùa đông ấm áp</h1>", unsafe_allow_html=True)
+
 
 with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
     st.write("- Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
