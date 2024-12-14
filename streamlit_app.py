@@ -6,9 +6,7 @@ st.set_page_config(
     page_icon=":page_with_curl:",
 )
 
-
-
-    # Apply CSS for background with size and blur
+# Apply CSS for background with size and blur
 st.markdown(
     f"""
     <style>
