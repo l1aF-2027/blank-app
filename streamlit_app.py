@@ -4,16 +4,29 @@ st.set_page_config(
     page_title="Chương trình thiện nguyện",
     page_icon="	:page_with_curl:"
 )
-page_bg_img = '''
-<style>
-body {
-background-image: url("MÙA ĐÔNG ẤM ÁP (1).png");
-background-size: cover;
-}
-</style>
-'''
+import base64
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_png_as_page_bg(png_file):
+    bin_str = get_base64_of_bin_file(png_file)
+    page_bg_img = '''
+    <style>
+    body {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+    return
+
+set_png_as_page_bg(r'MÙA ĐÔNG ẤM ÁP (1).png')
 st.markdown("<h1 style='text-align: center;'>Mùa đông ấm áp</h1>", unsafe_allow_html=True)
 
 with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
