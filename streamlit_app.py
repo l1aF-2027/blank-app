@@ -24,16 +24,19 @@ st.markdown(
 st.markdown(
     """
     <style>
-    [data-testid="column"]:first-child {
+    .fixed-column {
         position: fixed;
         top: 0;
         left: 0;
         width: 33%;
-        height: 100%;
+        height: 100vh;
         overflow: hidden;
     }
-    [data-testid="column"]:last-child {
+    .scrollable-column {
         margin-left: 33%;
+        width: 67%;
+        overflow-y: auto;
+        height: 100vh;
     }
     </style>
     """,
@@ -41,11 +44,13 @@ st.markdown(
 )
 
 # Hiển thị hai cột
-col1, col2 = st.columns([1, 2])
+col1, col2 = st.columns([1, 2], gap="none")
 
-# Cột 1: Hiển thị hình ảnh
+# Cột 1: Hiển thị hình ảnh, cố định
 with col1:
-    st.image("MÙA ĐÔNG ẤM ÁP (1).png", use_container_width=True)
+    st.markdown('<div class="fixed-column">', unsafe_allow_html=True)
+    st.image("MÙA ĐÔNG ẤM ÁP (1).png", use_column_width=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # Cột 2: Hiển thị nội dung chữ
 with col2:
