@@ -21,7 +21,24 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
+st.markdown(
+    """
+    <style>
+    [data-testid="column"]:first-child {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 33%;
+        height: 100%;
+        overflow: hidden;
+    }
+    [data-testid="column"]:last-child {
+        margin-left: 33%;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Hiển thị hai cột
 col1, col2 = st.columns([1, 2])
