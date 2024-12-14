@@ -1,5 +1,9 @@
 import streamlit as st
-import base64
+
+st.set_page_config(
+    page_title="Chương trình thiện nguyện",
+    page_icon=":page_with_curl:",
+)
 
 st.markdown(
     f"""
@@ -16,10 +20,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.set_page_config(
-    page_title="Chương trình thiện nguyện",
-    page_icon=":page_with_curl:",
-)
+
 
 # Hiển thị hai cột
 col1, col2 = st.columns([1, 2])
