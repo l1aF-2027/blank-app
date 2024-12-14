@@ -52,9 +52,23 @@ st.markdown('''
 .stApp [data-testid="stHeader"]{
     display:none;
 }
+
+/* Set text color to white */
+html, body, .stApp {{
+    color: white !important;
+}}
+
+/* Adjust table text color */
+tbody tr td, thead tr th {{
+    color: white !important;
+}}
+
+/* Ensure expander text is white */
+[data-testid="stExpander"] button div[data-testid="stMarkdownContainer"] {{
+    color: white !important;
+}}
 </style>
 ''', unsafe_allow_html=True)
-
 with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
     st.write("- Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
 
