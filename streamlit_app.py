@@ -56,6 +56,7 @@ st.markdown('''
 /* Set text color to white */
 html, body, .stApp {{
     color: white !important;
+    background-color: transparent !important;
 }}
 
 /* Adjust table text color */
@@ -67,8 +68,23 @@ tbody tr td, thead tr th {{
 [data-testid="stExpander"] button div[data-testid="stMarkdownContainer"] {{
     color: white !important;
 }}
+
+/* Adjust placeholder input text */
+input, textarea, select {{
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border-color: white !important;
+}}
+
+/* Adjust button styles */
+button {{
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: white !important;
+}}
 </style>
 ''', unsafe_allow_html=True)
+
 with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
     st.write("- Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
 
