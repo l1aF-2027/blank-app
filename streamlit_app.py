@@ -31,27 +31,13 @@ def set_bg_hack(main_bg):
     st.markdown(
         f"""
         <style>
+        footer {visibility: hidden;}
         .stApp {{
             background: url(data:image/{main_bg_ext};base64,{img_base64});
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             filter: blur(0.1px);
-        }}
-        
-        /* Make all text white */
-        .stMarkdown, .stExpander, .stTable, .stWrite {{
-            color: white !important;
-        }}
-        
-        /* Ensure headers are white */
-        h1, h2, h3, h4, h5, h6 {{
-            color: white !important;
-        }}
-        
-        /* Make table text white */
-        .stTable table {{
-            color: white !important;
         }}
         
         /* Remove default header and manage app button */
