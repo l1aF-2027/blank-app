@@ -3,7 +3,8 @@ import streamlit as st
 st.set_page_config(
     page_title="Chương trình thiện nguyện",
     page_icon="	:page_with_curl:",
-    layout="wide"
+    layout="wide",
+    theme="dark"
 )
 import base64
 
@@ -52,36 +53,9 @@ st.markdown('''
 .stApp [data-testid="stHeader"]{
     display:none;
 }
-
-/* Set text color to white */
-html, body, .stApp {{
-    color: white !important;
-    background-color: transparent !important;
-}}
-
-/* Adjust table text color */
-tbody tr td, thead tr th {{
-    color: white !important;
-}}
-
-/* Ensure expander text is white */
-[data-testid="stExpander"] button div[data-testid="stMarkdownContainer"] {{
-    color: white !important;
-}}
-
-/* Adjust placeholder input text */
-input, textarea, select {{
-    color: white !important;
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    border-color: white !important;
-}}
-
-/* Adjust button styles */
-button {{
-    color: white !important;
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    border-color: white !important;
-}}
+.stApp [data-testid="manage-app-button"]{
+    display:none;
+}
 </style>
 ''', unsafe_allow_html=True)
 
