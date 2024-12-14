@@ -33,10 +33,10 @@ def set_bg_hack(main_bg):
         <style>
         .stApp {{
             background: url(data:image/{main_bg_ext};base64,{img_base64});
-            background-size: 99%;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            background-filter: blur(100px);
+            background-filter: blur(1000000px);
         }}
         
         /* Remove default header and manage app button */
