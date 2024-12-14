@@ -35,7 +35,7 @@ def set_bg_hack(main_bg):
         <style>
         .stApp {{
             background: url(data:image/{main_bg_ext};base64,{img_base64});
-            background-size: cover; /* Options: contain, cover, or specify in px/percent */
+            background-size: 70%; /* Options: contain, cover, or specify in px/percent */
             background-repeat: no-repeat;
             background-position: center;
             filter: blur(0.1px); /* Adjust the blur effect (e.g., 0px for no blur, 8px for moderate blur) */
