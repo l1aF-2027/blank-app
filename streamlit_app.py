@@ -36,7 +36,7 @@ def set_bg_hack(main_bg):
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            background-filter: blur(0.1px);
+            background-filter: blur(1px);
         }}
         
         /* Remove default header and manage app button */
