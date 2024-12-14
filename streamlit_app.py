@@ -31,7 +31,6 @@ def set_bg_hack(main_bg):
     st.markdown(
         f"""
         <style>
-        footer {visibility: hidden;}
         .stApp {{
             background: url(data:image/{main_bg_ext};base64,{img_base64});
             background-size: cover;
