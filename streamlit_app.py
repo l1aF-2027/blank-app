@@ -4,8 +4,7 @@ import base64
 st.set_page_config(
     page_title="Chương trình thiện nguyện",
     page_icon=":page_with_curl:",
-    layout="wide",
-    theme="dark"
+    layout="wide"
 )
 
 def set_bg_hack(main_bg):
