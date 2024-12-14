@@ -20,22 +20,20 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 st.markdown(
     """
     <style>
-    .fixed-column {
+    [data-testid="column"]:first-child {
         position: fixed;
         top: 0;
         left: 0;
         width: 33%;
-        height: 100vh;
+        height: 100%;
         overflow: hidden;
     }
-    .scrollable-column {
+    [data-testid="column"]:last-child {
         margin-left: 33%;
-        width: 67%;
-        overflow-y: auto;
-        height: 100vh;
     }
     </style>
     """,
@@ -45,17 +43,12 @@ st.markdown(
 # Hiển thị hai cột
 col1, col2 = st.columns([1, 2])
 
-# Cột 1: Hiển thị hình ảnh, cố định
+# Cột 1: Hiển thị hình ảnh
 with col1:
-    st.markdown('<div class="fixed-column">', unsafe_allow_html=True)
     st.image("MÙA ĐÔNG ẤM ÁP (1).png", use_container_width=True)
-    st.markdown('</div>', unsafe_allow_html=True)
 
-# Cột 2: Hiển thị nội dung chữ, cuộn được
+# Cột 2: Hiển thị nội dung chữ
 with col2:
-    st.markdown('<div class="scrollable-column">', unsafe_allow_html=True)
-    st.markdown("# Chương trình thiện nguyện")
-
     with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
         st.write("- Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
 
@@ -88,4 +81,3 @@ with col2:
 
     with st.expander("V/ NHÀ TÀI TRỢ:"):
         st.image("z6128027135817_c5b8af696cb09172df0158de876cbb7b.jpg")
-    st.markdown('</div>', unsafe_allow_html=True)
