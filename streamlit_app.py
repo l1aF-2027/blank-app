@@ -1,15 +1,12 @@
 import streamlit as st
+import base64
 
 st.set_page_config(
     page_title="Chương trình thiện nguyện",
-    page_icon="	:page_with_curl:",
+    page_icon=":page_with_curl:",
     layout="wide",
     theme="dark"
 )
-import base64
-
-import streamlit as st
-import base64
 
 def set_bg_hack(main_bg):
     '''
@@ -37,10 +34,33 @@ def set_bg_hack(main_bg):
         <style>
         .stApp {{
             background: url(data:image/{main_bg_ext};base64,{img_base64});
-            background-size: cover; /* Options: contain, cover, or specify in px/percent */
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            filter: blur(0.1px); /* Adjust the blur effect (e.g., 0px for no blur, 8px for moderate blur) */
+            filter: blur(0.1px);
+        }}
+        
+        /* Make all text white */
+        .stMarkdown, .stExpander, .stTable, .stWrite {{
+            color: white !important;
+        }}
+        
+        /* Ensure headers are white */
+        h1, h2, h3, h4, h5, h6 {{
+            color: white !important;
+        }}
+        
+        /* Make table text white */
+        .stTable table {{
+            color: white !important;
+        }}
+        
+        /* Remove default header and manage app button */
+        .stApp [data-testid="stHeader"]{{
+            display:none;
+        }}
+        .stApp [data-testid="manage-app-button"]{{
+            display:none;
         }}
         </style>
         """,
@@ -48,16 +68,6 @@ def set_bg_hack(main_bg):
     )
 
 set_bg_hack(r'MÙA ĐÔNG ẤM ÁP (1).png')
-st.markdown('''
-<style>
-.stApp [data-testid="stHeader"]{
-    display:none;
-}
-.stApp [data-testid="manage-app-button"]{
-    display:none;
-}
-</style>
-''', unsafe_allow_html=True)
 
 with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
     st.write("- Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
@@ -88,5 +98,6 @@ with st.expander("IV/ KẾ HOẠCH CHƯƠNG TRÌNH:"):
 
     st.markdown("**Kế hoạch chi tiết và kịch bản chương trình:**")
     st.write("- Chi tiết về phương tiện di chuyển, kịch bản buổi sáng và buổi chiều sẽ được thông báo qua các tài liệu bổ sung.")
+
 with st.expander("V/ NHÀ TÀI TRỢ:"):
     st.image("z6128027135817_c5b8af696cb09172df0158de876cbb7b.jpg")
