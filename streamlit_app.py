@@ -85,7 +85,7 @@ with col2.container(height=1000):
         </style>
         <table>
             <tr>
-                <th colspan="4">Bảng giá</th>
+                <th colspan="4">BẢNG GIÁ ĐỒ ĂN VẶT VÀ ĐỒ HANDMADE</th>
             </tr>
             <tr>
                 <th rowspan="6">ĐỒ ĂN VẶT</th>
