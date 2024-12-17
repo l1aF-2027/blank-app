@@ -134,7 +134,17 @@ with col2.container(height=1000):
 
         # Hiển thị bảng HTML trong Streamlit
         st.markdown(html_code, unsafe_allow_html=True)
-
-
-    with st.expander("V/ NHÀ TÀI TRỢ:"):
-        st.image("z6128027135817_c5b8af696cb09172df0158de876cbb7b.jpg")
+    
+    with st.expander("V/ KẾ HOẠCH TUYỂN CTV:"):
+        st.write('- Số lượng: 10 - 15 CTV')
+        st.write('- Thời gian: Ngày 10/12/2024')
+        st.write('- Phân bố vào 3 ban: Truyền thông và Sáng tạo nội dung; Hậu cần; Tổ chức và sự kiện')
+        st.write('- Hình thức tuyển dụng: Online')
+    with st.expander("VI/ NHÀ TÀI TRỢ:"):
+        st.subheader('Giới thiệu về nhà tài trợ:')
+        st.write('Công ty Cổ phần Đầu tư xây dựng Châu Gia Phát (CGP) là một trong những doanh nghiệp hàng đầu tại Việt nam trong lĩnh vực thi công xây dựng và thiết kế nội thất. Với phương chấm “Tận tâm - Uy tín - Chất lượng”, CGP không chỉ tập trung phát triển kinh doanh mà còn luôn chú trọng vào các hoạt động xã hội ý nghĩa, mang lại giá trị bền vững cho cộng đồng.')
+        st.subheader('Sứ mệnh vì cộng đồng:')
+        st.write('Châu Gia Phát xem trách nhiệm xã hội là một phần không thể thiếu trong hành trình phát triển. Tham gia chương trình Mùa Đông Ấm Áp, CGP tiếp tục lan tỏa tinh thần sẻ chia bằng cách tài trợ nguồn lực thiết thực nhằm hỗ trợ các bệnh nhân có hoàn cảnh khó khăn.')
+        st.subheader('Vai trò trong chương trình:')
+        st.write('Với vai trò là nhà tài trợ độc quyền, CGP đã đóng góp tài chính và hiện vật, hỗ trợ vận chuyển và tổ chức để đảm bảo quà tặng như áo ấm, chăn bông và thực phẩm được trao tận tay người bệnh. Sự hỗ trợ này không chỉ mang lại hơi ấm mà còn truyền tải tinh thần nhân văn sâu sắc.')
+        st.image('Picture1.png', use_container_width=True)
