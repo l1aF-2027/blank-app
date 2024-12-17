@@ -60,43 +60,23 @@ with col2.container(height=1000):
         st.write("- Bệnh nhân: Khoảng 100 bệnh nhân ung thư máu có hoàn cảnh khó khăn")
 
     with st.expander("IV/ CHIẾN DỊCH BÁN ĐỒ HANDMADE, ĐỒ ĂN VẶT:"):
-        data = {
-            "SẢN PHẨM": [
-                "Bánh tráng xike khô",
-                "Bánh tráng trộn ớt rim muối tỏi",
-                "Cơm cháy mỡ hành",
-                "Cơm cháy chà bông",
-                "Bánh gấu",
-                "Vòng tay",
-                "Dây đeo điện thoại",
-            ],
-            "GIÁ LẺ": [
-                "8k/ 1 bịch",
-                "12k/ bịch",
-                "9k/ 1 bịch",
-                "20k/ bịch",
-                "25k/ 1 túi",
-                "30k",
-                "35k",
-            ],
-            "GIÁ COMBO": [
-                "35k/ 5 bịch",
-                "Mua 2 tặng 1 (Bánh tráng xike khô)",
-                "22k/ 3 bịch",
-                "35k/ 2 bịch tặng 1 bịch cơm cháy mỡ hành",
-                "Mua 2 tặng 1",
-                "",
-                "",
-            ],
-        }
+        data = [
+            ("ĐỒ ĂN VẶT", "Bánh tráng xike khô", "8k/ 1 bịch", "35k/ 5 bịch"),
+            ("ĐỒ ĂN VẶT", "Bánh tráng trộn ớt rim muối tỏi", "12k/ bịch", "Mua 2 tặng 1 (Bánh tráng xike khô)"),
+            ("ĐỒ ĂN VẶT", "Cơm cháy mỡ hành", "9k/ 1 bịch", "22k/ 3 bịch"),
+            ("ĐỒ ĂN VẶT", "Cơm cháy chà bông", "20k/ bịch", "35k/ 2 bịch tặng 1 bịch cơm cháy mỡ hành"),
+            ("ĐỒ ĂN VẶT", "Bánh gấu", "25k/ 1 túi", "Mua 2 tặng 1"),
+            ("ĐỒ HANDMADE", "Vòng tay", "30k", ""),
+            ("ĐỒ HANDMADE", "Dây đeo điện thoại", "35k", ""),
+        ]
 
-        # Tạo bảng dữ liệu từ DataFrame
-        df = pd.DataFrame(data)
+        # Tạo DataFrame với MultiIndex
+        df = pd.DataFrame(data, columns=["DANH MỤC", "SẢN PHẨM", "GIÁ LẺ", "GIÁ COMBO"])
 
-        # Thêm cột to chung "Bảng giá" bằng cách tạo dòng tiêu đề
+        # Hiển thị tiêu đề lớn
         st.write("### Bảng giá")
 
-        # Hiển thị bảng trong Streamlit
-        st.table(df)
+        # Hiển thị bảng với MultiIndex
+        st.table(df.set_index(["DANH MỤC", "SẢN PHẨM"]))
     with st.expander("V/ NHÀ TÀI TRỢ:"):
         st.image("z6128027135817_c5b8af696cb09172df0158de876cbb7b.jpg")
