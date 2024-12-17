@@ -60,8 +60,7 @@ with col2.container(height=1000):
         st.write("- Bệnh nhân: Khoảng 100 bệnh nhân ung thư máu có hoàn cảnh khó khăn")
 
     with st.expander("IV/ CHIẾN DỊCH BÁN ĐỒ HANDMADE, ĐỒ ĂN VẶT:"):
-
-        # HTML để tạo bảng với căn giữa nội dung
+        # HTML để tạo bảng căn giữa toàn bộ chữ
         html_code = """
         <style>
             table {
@@ -71,16 +70,16 @@ with col2.container(height=1000):
             }
             th, td {
                 border: 1px solid black;
-                text-align: center;  /* Căn giữa nội dung */
+                text-align: center;  /* Căn giữa theo chiều ngang */
                 vertical-align: middle; /* Căn giữa theo chiều dọc */
-                padding: 8px;
+                padding: 12px;  /* Thêm khoảng cách trong ô */
             }
             th {
                 background-color: #f2f2f2;
+                font-weight: bold;
             }
             th[colspan] {
-                font-size: 18px;
-                font-weight: bold;
+                font-size: 20px;
                 text-align: center;
             }
         </style>
