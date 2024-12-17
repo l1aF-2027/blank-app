@@ -60,23 +60,68 @@ with col2.container(height=1000):
         st.write("- Bệnh nhân: Khoảng 100 bệnh nhân ung thư máu có hoàn cảnh khó khăn")
 
     with st.expander("IV/ CHIẾN DỊCH BÁN ĐỒ HANDMADE, ĐỒ ĂN VẶT:"):
-        data = [
-            ("ĐỒ ĂN VẶT", "Bánh tráng xike khô", "8k/ 1 bịch", "35k/ 5 bịch"),
-            ("ĐỒ ĂN VẶT", "Bánh tráng trộn ớt rim muối tỏi", "12k/ bịch", "Mua 2 tặng 1 (Bánh tráng xike khô)"),
-            ("ĐỒ ĂN VẶT", "Cơm cháy mỡ hành", "9k/ 1 bịch", "22k/ 3 bịch"),
-            ("ĐỒ ĂN VẶT", "Cơm cháy chà bông", "20k/ bịch", "35k/ 2 bịch tặng 1 bịch cơm cháy mỡ hành"),
-            ("ĐỒ ĂN VẶT", "Bánh gấu", "25k/ 1 túi", "Mua 2 tặng 1"),
-            ("ĐỒ HANDMADE", "Vòng tay", "30k", ""),
-            ("ĐỒ HANDMADE", "Dây đeo điện thoại", "35k", ""),
-        ]
+        html_code = """
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                font-family: Arial, sans-serif;
+            }
+            th, td {
+                border: 1px solid black;
+                text-align: center;
+                padding: 8px;
+            }
+            th[colspan] {
+                background-color: #f2f2f2;
+                font-size: 18px;
+            }
+        </style>
+        <table>
+            <tr>
+                <th colspan="4">Bảng giá</th>
+            </tr>
+            <tr>
+                <th rowspan="5">ĐỒ ĂN VẶT</th>
+                <td>Bánh tráng xike khô</td>
+                <td>8k/ 1 bịch</td>
+                <td>35k/ 5 bịch</td>
+            </tr>
+            <tr>
+                <td>Bánh tráng trộn ớt rim muối tỏi</td>
+                <td>12k/ bịch</td>
+                <td>Mua 2 tặng 1 (Bánh tráng xike khô)</td>
+            </tr>
+            <tr>
+                <td>Cơm cháy mỡ hành</td>
+                <td>9k/ 1 bịch</td>
+                <td>22k/ 3 bịch</td>
+            </tr>
+            <tr>
+                <td>Cơm cháy chà bông</td>
+                <td>20k/ bịch</td>
+                <td>35k/ 2 bịch tặng 1 bịch cơm cháy mỡ hành</td>
+            </tr>
+            <tr>
+                <td>Bánh gấu</td>
+                <td>25k/ 1 túi</td>
+                <td>Mua 2 tặng 1</td>
+            </tr>
+            <tr>
+                <th rowspan="2">ĐỒ HANDMADE</th>
+                <td>Vòng tay</td>
+                <td>30k</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Dây đeo điện thoại</td>
+                <td>35k</td>
+                <td></td>
+            </tr>
+        </table>
+        """
 
-        # Tạo DataFrame với MultiIndex
-        df = pd.DataFrame(data, columns=["DANH MỤC", "SẢN PHẨM", "GIÁ LẺ", "GIÁ COMBO"])
-
-        # Hiển thị tiêu đề lớn
-        st.write("### Bảng giá")
-
-        # Hiển thị bảng với MultiIndex
-        st.table(df.set_index(["DANH MỤC", "SẢN PHẨM"]))
+        # Hiển thị bảng HTML trong Streamlit
+        st.markdown(html_code, unsafe_allow_html=True)
     with st.expander("V/ NHÀ TÀI TRỢ:"):
         st.image("z6128027135817_c5b8af696cb09172df0158de876cbb7b.jpg")
