@@ -60,6 +60,7 @@ with col2.container(height=1000):
         st.write("- Bệnh nhân: Khoảng 100 bệnh nhân ung thư máu có hoàn cảnh khó khăn")
 
     with st.expander("IV/ CHIẾN DỊCH BÁN ĐỒ HANDMADE, ĐỒ ĂN VẶT:"):
+        # HTML để tạo bảng chuẩn với cột gộp và các cột con
         html_code = """
         <style>
             table {
@@ -72,9 +73,12 @@ with col2.container(height=1000):
                 text-align: center;
                 padding: 8px;
             }
-            th[colspan] {
+            th {
                 background-color: #f2f2f2;
+            }
+            th[colspan] {
                 font-size: 18px;
+                font-weight: bold;
             }
         </style>
         <table>
@@ -82,7 +86,12 @@ with col2.container(height=1000):
                 <th colspan="4">Bảng giá</th>
             </tr>
             <tr>
-                <th rowspan="5">ĐỒ ĂN VẶT</th>
+                <th rowspan="6">ĐỒ ĂN VẶT</th>
+                <th>SẢN PHẨM</th>
+                <th>GIÁ LẺ</th>
+                <th>GIÁ COMBO</th>
+            </tr>
+            <tr>
                 <td>Bánh tráng xike khô</td>
                 <td>8k/ 1 bịch</td>
                 <td>35k/ 5 bịch</td>
@@ -108,7 +117,7 @@ with col2.container(height=1000):
                 <td>Mua 2 tặng 1</td>
             </tr>
             <tr>
-                <th rowspan="2">ĐỒ HANDMADE</th>
+                <th rowspan="3">ĐỒ HANDMADE</th>
                 <td>Vòng tay</td>
                 <td>30k</td>
                 <td></td>
@@ -123,5 +132,6 @@ with col2.container(height=1000):
 
         # Hiển thị bảng HTML trong Streamlit
         st.markdown(html_code, unsafe_allow_html=True)
+
     with st.expander("V/ NHÀ TÀI TRỢ:"):
         st.image("z6128027135817_c5b8af696cb09172df0158de876cbb7b.jpg")
