@@ -1,5 +1,5 @@
 import streamlit as st
-
+import pandas as pd
 st.set_page_config(
     page_title="Chương trình thiện nguyện",
     page_icon=":page_with_curl:",
@@ -50,34 +50,53 @@ with col1:
 # Cột 2: Hiển thị nội dung chữ
 with col2.container(height=1000):
     with st.expander("I/ MỤC ĐÍCH CHƯƠNG TRÌNH:"):
-        st.write("- Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
-
+        st.write("Là một chương trình thiện nguyện của Đoàn - Hội khoa Đô Thị học, lần đầu tiên được triển khai nhằm mong muốn được mang đến sự ấm áp của tình người qua những món quà nhỏ, đậm đà tình thân cho những người không may mắn bị mắc bệnh ung thư và ung bướu tại bệnh viện Ung Bướu thành phố Hồ Chí Minh.")
     with st.expander("II/ THỜI GIAN VÀ ĐỊA ĐIỂM:"):
-        st.write("- Thời gian: ngày 21/12/2024 ( dự trù: đầu tháng 1/2025)")
+        st.write("- Thời gian: ngày 21/12/2024")
         st.write("- Địa điểm: Hội trường C - tầng 3, Bệnh viện Ung Bướu, Quận 9, thành phố Hồ Chí Minh")
 
     with st.expander("III/ ĐỐI TƯỢNG THAM GIA:"):
         st.write("- Tình nguyện viên: Sinh viên trường đại học Khoa Học Xã hội và Nhân Văn")
-        st.write("- Bệnh nhân: Khoảng 150 bệnh nhân ung thư máu có hoàn cảnh khó khăn")
+        st.write("- Bệnh nhân: Khoảng 100 bệnh nhân ung thư máu có hoàn cảnh khó khăn")
 
-    with st.expander("IV/ KẾ HOẠCH CHƯƠNG TRÌNH:"):
-        st.markdown("**4.1 Chuẩn bị trước chương trình:**")
-        st.write("- Chiến dịch bán đồ Handmade, đồ ăn vặt:")
-        st.table({
-            "Sản phẩm": ["Vòng tay, vòng cổ", "Thú nhồi bông hoặc túi thơm", "Móc khóa"],
-            "Miêu tả": [
-                "Trang sức handmade bằng hạt cườm, dây len, hoặc dây da",
-                "Thú nhồi bông hoặc túi thơm với hoa khô tinh dầu mang lại cảm giác ấm áp",
-                "Móc khóa làm từ vải nỉ, gỗ, hoặc nhựa resin với hình dạng đáng yêu"
-            ]
-        })
+    with st.expander("IV/ CHIẾN DỊCH BÁN ĐỒ HANDMADE, ĐỒ ĂN VẶT:"):
+        data = {
+            "SẢN PHẨM": [
+                "Bánh tráng xike khô",
+                "Bánh tráng trộn ớt rim muối tỏi",
+                "Cơm cháy mỡ hành",
+                "Cơm cháy chà bông",
+                "Bánh gấu",
+                "Vòng tay",
+                "Dây đeo điện thoại",
+            ],
+            "GIÁ LẺ": [
+                "8k/ 1 bịch",
+                "12k/ bịch",
+                "9k/ 1 bịch",
+                "20k/ bịch",
+                "25k/ 1 túi",
+                "30k",
+                "35k",
+            ],
+            "GIÁ COMBO": [
+                "35k/ 5 bịch",
+                "Mua 2 tặng 1 (Bánh tráng xike khô)",
+                "22k/ 3 bịch",
+                "35k/ 2 bịch tặng 1 bịch cơm cháy mỡ hành",
+                "Mua 2 tặng 1",
+                "",
+                "",
+            ],
+        }
 
-        st.write("- Tuyển cộng tác viên thời vụ:")
-        st.write("Thời gian: Ngày 10/12/2024 truyền thông sẽ lên bài điền form tuyển cộng tác viên. Phỏng vấn trực tiếp lúc 9 giờ sáng ngày 14/12/2024 tại Trường ĐH KHXH&NV.")
-        st.write("Số lượng cần: 10-15 CTV chia làm 3 nhóm: Truyền thông, Hậu cần, Tổ chức và sự kiện.")
+        # Tạo bảng dữ liệu từ DataFrame
+        df = pd.DataFrame(data)
 
-        st.markdown("**Kế hoạch chi tiết và kịch bản chương trình:**")
-        st.write("- Chi tiết về phương tiện di chuyển, kịch bản buổi sáng và buổi chiều sẽ được thông báo qua các tài liệu bổ sung.")
+        # Thêm cột to chung "Bảng giá" bằng cách tạo dòng tiêu đề
+        st.write("### Bảng giá")
 
+        # Hiển thị bảng trong Streamlit
+        st.table(df)
     with st.expander("V/ NHÀ TÀI TRỢ:"):
         st.image("z6128027135817_c5b8af696cb09172df0158de876cbb7b.jpg")
