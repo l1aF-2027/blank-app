@@ -89,9 +89,9 @@ with col2.container(height=900):
             </tr>
             <tr>
                 <th rowspan="6">ĐỒ ĂN VẶT</th>
-                <th>SẢN PHẨM</th>
-                <th>GIÁ LẺ</th>
-                <th>GIÁ COMBO</th>
+                <th> SẢN PHẨM</th>
+                <th> GIÁ LẺ</th>
+                <th> GIÁ COMBO</th>
             </tr>
             <tr>
                 <td>Bánh tráng xike khô</td>
