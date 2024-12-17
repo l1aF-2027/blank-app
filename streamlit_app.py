@@ -60,7 +60,8 @@ with col2.container(height=1000):
         st.write("- Bệnh nhân: Khoảng 100 bệnh nhân ung thư máu có hoàn cảnh khó khăn")
 
     with st.expander("IV/ CHIẾN DỊCH BÁN ĐỒ HANDMADE, ĐỒ ĂN VẶT:"):
-        # HTML để tạo bảng chuẩn với cột gộp và các cột con
+
+        # HTML để tạo bảng với căn giữa nội dung
         html_code = """
         <style>
             table {
@@ -70,7 +71,8 @@ with col2.container(height=1000):
             }
             th, td {
                 border: 1px solid black;
-                text-align: center;
+                text-align: center;  /* Căn giữa nội dung */
+                vertical-align: middle; /* Căn giữa theo chiều dọc */
                 padding: 8px;
             }
             th {
@@ -79,6 +81,7 @@ with col2.container(height=1000):
             th[colspan] {
                 font-size: 18px;
                 font-weight: bold;
+                text-align: center;
             }
         </style>
         <table>
@@ -117,7 +120,7 @@ with col2.container(height=1000):
                 <td>Mua 2 tặng 1</td>
             </tr>
             <tr>
-                <th rowspan="3">ĐỒ HANDMADE</th>
+                <th rowspan="2">ĐỒ HANDMADE</th>
                 <td>Vòng tay</td>
                 <td>30k</td>
                 <td></td>
@@ -132,6 +135,7 @@ with col2.container(height=1000):
 
         # Hiển thị bảng HTML trong Streamlit
         st.markdown(html_code, unsafe_allow_html=True)
+
 
     with st.expander("V/ NHÀ TÀI TRỢ:"):
         st.image("z6128027135817_c5b8af696cb09172df0158de876cbb7b.jpg")
